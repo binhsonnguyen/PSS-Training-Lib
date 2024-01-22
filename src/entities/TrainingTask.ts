@@ -1,8 +1,6 @@
 import TrainingQuality from "./TrainingQuality";
 import StatsSet from "./StatsSet";
 import Stat from "./Stat";
-import StatGainMultiplier from "./StatGainMultiplier";
-import DecimalAdjust from "./DecimalAdjust";
 
 export default class TrainingTask {
     private _statsEffective: StatsSet;
@@ -25,20 +23,16 @@ export default class TrainingTask {
         return this._mainStat;
     }
 
-    mainStatEffective(): number {
-        return this.statsEffective.get(this.mainStat)
-    }
-
-    requiredConsumerableFactor(stat: Stat, currentPoint: number, usedTp: number, totalTp: number, fatigue: number) {
-        let factor1 = 1 - usedTp / totalTp
-        let factor2 = 1 - currentPoint / totalTp
-        let factor3 = StatGainMultiplier.forFatigue(fatigue)
-        let factor = 1 / (factor1 * factor2 * factor3)
-        return DecimalAdjust.floor(factor, -4)
+    isMainStat(stat: Stat) {
+        return stat == this.mainStat;
     }
 
     get statsEffective(): StatsSet {
         return this._statsEffective;
+    }
+
+    trainingEffect(stat: Stat): number {
+        return <number>this.statsEffective.get(stat);
     }
 
     get quality(): TrainingQuality {
