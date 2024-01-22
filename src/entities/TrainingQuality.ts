@@ -2,6 +2,7 @@ export default class TrainingQuality {
     get name(): string {
         return this._name;
     }
+
     private _name: string;
 
     static COMMON: TrainingQuality = new TrainingQuality("Common")
@@ -17,5 +18,11 @@ export default class TrainingQuality {
 
     private constructor(name: string) {
         this._name = name;
+    }
+
+    alwaysGainningStat() {
+        return this == TrainingQuality.HERO
+            || TrainingQuality.SPECIAL
+            || TrainingQuality.LEGENDARY
     }
 }
