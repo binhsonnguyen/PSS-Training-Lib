@@ -3,14 +3,17 @@ import TrainingTask from "./TrainingTask";
 import Stat from "./Stat";
 import StatGainMultiplier from "./StatGainMultiplier";
 import DecimalAdjust from "./DecimalAdjust";
+import Guaranteed from "./Guaranteed";
 
 export default class Training {
     get currentTraining(): StatsSet {
         return this._currentTraining;
     }
+
     get traingTask(): TrainingTask {
         return this._traingTask;
     }
+
     get fatigue(): number {
         return this._fatigue;
     }
@@ -18,6 +21,7 @@ export default class Training {
     set fatigue(value: number) {
         this._fatigue = value;
     }
+
     get totalTrainingPoint(): number {
         return this._totalTrainingPoint;
     }
@@ -25,6 +29,7 @@ export default class Training {
     set totalTrainingPoint(value: number) {
         this._totalTrainingPoint = value;
     }
+
     private _totalTrainingPoint: number;
     private _fatigue: number;
     private _traingTask: TrainingTask;
