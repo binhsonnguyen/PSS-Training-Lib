@@ -34,4 +34,27 @@ test('test maximum possibility ', () => {
     expect(training000.maximumPossibleImprovement(Stat.ATK)).toBe(3)
     expect(training000.maximumPossibleImprovement(Stat.ABL)).toBe(1)
     expect(training000.maximumPossibleImprovement(Stat.PLT)).toBe(0)
+
+    let training100 = new Training(
+        110,
+        100,
+        TrainingTask.HP_LEGENDARY,
+        new StatsSet()
+    )
+    expect(training100.maximumPossibleImprovement(Stat.HP)).toBe(4)
+    expect(training100.maximumPossibleImprovement(Stat.ATK)).toBe(0)
+    expect(training100.maximumPossibleImprovement(Stat.ABL)).toBe(0)
+    expect(training100.maximumPossibleImprovement(Stat.PLT)).toBe(0)
+
+    let training001 = new Training(
+        110,
+        1,
+        TrainingTask.HP_SPECIAL,
+        new StatsSet()
+    )
+    expect(training001.maximumPossibleImprovement(Stat.HP)).toBe(50)
+    expect(training001.maximumPossibleImprovement(Stat.ATK)).toBe(8)
+    expect(training001.maximumPossibleImprovement(Stat.ABL)).toBe(1)
+    expect(training001.maximumPossibleImprovement(Stat.STA)).toBe(2)
+    expect(training001.maximumPossibleImprovement(Stat.ENG)).toBe(8)
 });
