@@ -1,4 +1,7 @@
 export default class TrainingQuality {
+    get name(): string {
+        return this._name;
+    }
     private _name: string;
 
     static COMMON: TrainingQuality = new TrainingQuality("Common")
