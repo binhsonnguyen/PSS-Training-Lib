@@ -1,4 +1,5 @@
 import {name} from "ts-jest/dist/transformers/hoist-jest";
+import Stat from "./Stat";
 
 export default class PossibleImprovement {
     set maximumPossible(value: number) {
@@ -8,17 +9,13 @@ export default class PossibleImprovement {
         return this._maximumPossible;
     }
 
-    get possible(): boolean {
-        return this._maximumPossible > 0;
-    }
-
-    private _name: string;
+    private _stat: Stat;
     private _minimumPossible: number;
     private _maximumPossible: number;
 
 
-    private constructor(name: string, minimumPossible: number = 0, maximumPossible: number = 0) {
-        this._name = name;
+    private constructor(stat: Stat, minimumPossible: number = 0, maximumPossible: number = 0) {
+        this._stat = stat;
         this._minimumPossible = minimumPossible;
         this._maximumPossible = maximumPossible;
     }
@@ -32,8 +29,8 @@ export default class PossibleImprovement {
     }
 
 
-    get name(): string {
-        return this._name;
+    get stat(): Stat {
+        return this._stat;
     }
 
     from(value: number): PossibleImprovement {
@@ -46,40 +43,40 @@ export default class PossibleImprovement {
         return this;
     }
 
-    static HP(value: number = 0) {
-        return new PossibleImprovement("HP")
+    static HP() {
+        return new PossibleImprovement(Stat.HP)
     }
 
-    static ATK(value: number = 0) {
-        return new PossibleImprovement("ATK")
+    static ATK() {
+        return new PossibleImprovement(Stat.ATK)
     }
 
-    static RPR(value: number = 0) {
-        return new PossibleImprovement("RPR")
+    static RPR() {
+        return new PossibleImprovement(Stat.RPR)
     }
 
-    static ABL(value: number = 0) {
-        return new PossibleImprovement("ABL")
+    static ABL() {
+        return new PossibleImprovement(Stat.ABL)
     }
 
-    static STA(value: number = 0) {
-        return new PossibleImprovement("STA")
+    static STA() {
+        return new PossibleImprovement(Stat.STA)
     }
 
-    static PLT(value: number = 0) {
-        return new PossibleImprovement("PLT")
+    static PLT() {
+        return new PossibleImprovement(Stat.PLT)
     }
 
-    static SCI(value: number = 0) {
-        return new PossibleImprovement("SCI")
+    static SCI() {
+        return new PossibleImprovement(Stat.SCI)
     }
 
-    static ENG(value: number = 0) {
-        return new PossibleImprovement("ENG")
+    static ENG() {
+        return new PossibleImprovement(Stat.ENG)
     }
 
-    static WPN(value: number = 0) {
-        return new PossibleImprovement("WPN")
+    static WPN() {
+        return new PossibleImprovement(Stat.WPN)
     }
 
 }
