@@ -41,7 +41,7 @@ export default class TrainingTask {
 
     static ABL_COMMON = new TrainingTask(
         "Paracetamol",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.COMMON,
         new StatsSet(
             1,
@@ -57,7 +57,7 @@ export default class TrainingTask {
 
     static ABL_ELITE = new TrainingTask(
         "Paracetamol Rapid",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.ELITE,
         new StatsSet(
             2,
@@ -73,7 +73,7 @@ export default class TrainingTask {
 
     static ABL_UNIQUE = new TrainingTask(
         "Ibuprofen",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.UNIQUE,
         new StatsSet(
             3,
@@ -89,7 +89,7 @@ export default class TrainingTask {
 
     static ABL_EPIC = new TrainingTask(
         "Ibuprofen Rapid",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.EPIC,
         new StatsSet(
             5,
@@ -105,7 +105,7 @@ export default class TrainingTask {
 
     static ABL_HERO = new TrainingTask(
         "Ginkgo",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.HERO,
         new StatsSet(
             12,
@@ -121,7 +121,7 @@ export default class TrainingTask {
 
     static ABL_SPECIAL = new TrainingTask(
         "Brain Enhancer",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.SPECIAL,
         new StatsSet(
             8,
@@ -137,7 +137,7 @@ export default class TrainingTask {
 
     static ABL_LEGENDARY = new TrainingTask(
         "Super Brain Enhancer",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             3,
@@ -153,7 +153,7 @@ export default class TrainingTask {
 
     static ABL_TRAINING_1 = new TrainingTask(
         "Steam Yoga",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.TRAINING_1,
         new StatsSet(
             0,
@@ -169,7 +169,7 @@ export default class TrainingTask {
 
     static ABL_TRAINING_2 = new TrainingTask(
         "Crew vs Wild",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.TRAINING_2,
         new StatsSet(
             1,
@@ -185,7 +185,7 @@ export default class TrainingTask {
 
     static ABL_TRAINING_3 = new TrainingTask(
         "Space Marine",
-        Stat.WPN,
+        Stat.ABL,
         TrainingQuality.TRAINING_3,
         new StatsSet(
             1,
@@ -201,7 +201,7 @@ export default class TrainingTask {
 
     static ATK_COMMON = new TrainingTask(
         "Chicken Skewer",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.COMMON,
         new StatsSet(
             0,
@@ -217,7 +217,7 @@ export default class TrainingTask {
 
     static ATK_ELITE = new TrainingTask(
         "Yakitori",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.ELITE,
         new StatsSet(
             0,
@@ -233,7 +233,7 @@ export default class TrainingTask {
 
     static ATK_UNIQUE = new TrainingTask(
         "Double Yakitori",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.UNIQUE,
         new StatsSet(
             1,
@@ -249,7 +249,7 @@ export default class TrainingTask {
 
     static ATK_EPIC = new TrainingTask(
         "Shish Kebabs",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.EPIC,
         new StatsSet(
             2,
@@ -265,7 +265,7 @@ export default class TrainingTask {
 
     static ATK_HERO = new TrainingTask(
         "Drumsticks",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.HERO,
         new StatsSet(
             3,
@@ -281,7 +281,7 @@ export default class TrainingTask {
 
     static ATK_SPECIAL = new TrainingTask(
         "Steak",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.SPECIAL,
         new StatsSet(
             2,
@@ -297,7 +297,7 @@ export default class TrainingTask {
 
     static ATK_LEGENDARY = new TrainingTask(
         "Roast Turkey",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             1,
@@ -313,7 +313,7 @@ export default class TrainingTask {
 
     static ATK_TRAINING_1 = new TrainingTask(
         "Kickbox",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.TRAINING_1,
         new StatsSet(
             0,
@@ -329,7 +329,7 @@ export default class TrainingTask {
 
     static ATK_TRAINING_2 = new TrainingTask(
         "BJJ",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.TRAINING_2,
         new StatsSet(
             1,
@@ -345,7 +345,7 @@ export default class TrainingTask {
 
     static ATK_TRAINING_3 = new TrainingTask(
         "Shaolin Tradition",
-        Stat.WPN,
+        Stat.ATK,
         TrainingQuality.TRAINING_3,
         new StatsSet(
             1,
@@ -361,7 +361,7 @@ export default class TrainingTask {
 
     static ENG_COMMON = new TrainingTask(
         "Standard Engineering Tool Kit",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.COMMON,
         new StatsSet(
             0,
@@ -377,7 +377,7 @@ export default class TrainingTask {
 
     static ENG_ELITE = new TrainingTask(
         "Obsolete Engineering Toolkit",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.ELITE,
         new StatsSet(
             0,
@@ -393,7 +393,7 @@ export default class TrainingTask {
 
     static ENG_UNIQUE = new TrainingTask(
         "Starter Engineering Tool Kit ",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.UNIQUE,
         new StatsSet(
             0,
@@ -409,7 +409,7 @@ export default class TrainingTask {
 
     static ENG_EPIC = new TrainingTask(
         "Advanced Engineering Tool Kit",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.EPIC,
         new StatsSet(
             0,
@@ -425,7 +425,7 @@ export default class TrainingTask {
 
     static ENG_HERO = new TrainingTask(
         "Rare Engineering Tool Kit",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.HERO,
         new StatsSet(
             0,
@@ -441,7 +441,7 @@ export default class TrainingTask {
 
     static ENG_SPECIAL = new TrainingTask(
         "Prototype Engineering Tool Kit",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.SPECIAL,
         new StatsSet(
             0,
@@ -457,7 +457,7 @@ export default class TrainingTask {
 
     static ENG_LEGENDARY = new TrainingTask(
         "Alien Engineering Tool Kit",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             0,
@@ -473,7 +473,7 @@ export default class TrainingTask {
 
     static ENG_TRAINING_1 = new TrainingTask(
         "Study Expert Engineering Manual",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.TRAINING_1,
         new StatsSet(
             0,
@@ -489,7 +489,7 @@ export default class TrainingTask {
 
     static ENG_TRAINING_2 = new TrainingTask(
         "Engineering Summit",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.TRAINING_2,
         new StatsSet(
             0,
@@ -505,7 +505,7 @@ export default class TrainingTask {
 
     static ENG_TRAINING_3 = new TrainingTask(
         "Engineering PHD",
-        Stat.WPN,
+        Stat.ENG,
         TrainingQuality.TRAINING_3,
         new StatsSet(
             0,
@@ -521,7 +521,7 @@ export default class TrainingTask {
 
     static HP_COMMON = new TrainingTask(
         "Small Protein Shake",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.COMMON,
         new StatsSet(
             2,
@@ -537,7 +537,7 @@ export default class TrainingTask {
 
     static HP_ELITE = new TrainingTask(
         "Regular Protein Shake",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.ELITE,
         new StatsSet(
             4,
@@ -553,7 +553,7 @@ export default class TrainingTask {
 
     static HP_UNIQUE = new TrainingTask(
         "Large Protein Shake",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.UNIQUE,
         new StatsSet(
             8,
@@ -569,7 +569,7 @@ export default class TrainingTask {
 
     static HP_EPIC = new TrainingTask(
         "Super Protein Shake",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.EPIC,
         new StatsSet(
             16,
@@ -585,7 +585,7 @@ export default class TrainingTask {
 
     static HP_HERO = new TrainingTask(
         "HGH",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.HERO,
         new StatsSet(
             25,
@@ -601,7 +601,7 @@ export default class TrainingTask {
 
     static HP_SPECIAL = new TrainingTask(
         "Enhanced HGH",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.SPECIAL,
         new StatsSet(
             50,
@@ -617,7 +617,7 @@ export default class TrainingTask {
 
     static HP_LEGENDARY = new TrainingTask(
         "Prototype HGH",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             100,
@@ -633,7 +633,7 @@ export default class TrainingTask {
 
     static HP_TRAINING_1 = new TrainingTask(
         "Bench Press",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.TRAINING_1,
         new StatsSet(
             4,
@@ -649,7 +649,7 @@ export default class TrainingTask {
 
     static HP_TRAINING_2 = new TrainingTask(
         "Muscle Beach",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.TRAINING_2,
         new StatsSet(
             8,
@@ -665,7 +665,7 @@ export default class TrainingTask {
 
     static HP_TRAINING_3 = new TrainingTask(
         "Olympic Weightlifting",
-        Stat.WPN,
+        Stat.HP,
         TrainingQuality.TRAINING_3,
         new StatsSet(
             12,
@@ -681,7 +681,7 @@ export default class TrainingTask {
 
     static PLT_COMMON = new TrainingTask(
         "Street Map",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.COMMON,
         new StatsSet(
             0,
@@ -697,7 +697,7 @@ export default class TrainingTask {
 
     static PLT_ELITE = new TrainingTask(
         "Travel Map",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.ELITE,
         new StatsSet(
             0,
@@ -713,7 +713,7 @@ export default class TrainingTask {
 
     static PLT_UNIQUE = new TrainingTask(
         "World Map",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.UNIQUE,
         new StatsSet(
             0,
@@ -729,7 +729,7 @@ export default class TrainingTask {
 
     static PLT_EPIC = new TrainingTask(
         "Global Map",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.EPIC,
         new StatsSet(
             0,
@@ -745,7 +745,7 @@ export default class TrainingTask {
 
     static PLT_HERO = new TrainingTask(
         "System Map",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.HERO,
         new StatsSet(
             0,
@@ -761,7 +761,7 @@ export default class TrainingTask {
 
     static PLT_SPECIAL = new TrainingTask(
         "Star Map",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.SPECIAL,
         new StatsSet(
             0,
@@ -777,7 +777,7 @@ export default class TrainingTask {
 
     static PLT_LEGENDARY = new TrainingTask(
         "Galactic Navigation Map",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             0,
@@ -793,7 +793,7 @@ export default class TrainingTask {
 
     static PLT_TRAINING_1 = new TrainingTask(
         "Read Expert Pilot Handbook",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.TRAINING_1,
         new StatsSet(
             0,
@@ -809,7 +809,7 @@ export default class TrainingTask {
 
     static PLT_TRAINING_2 = new TrainingTask(
         "Pilot Summit",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.TRAINING_2,
         new StatsSet(
             0,
@@ -825,7 +825,7 @@ export default class TrainingTask {
 
     static PLT_TRAINING_3 = new TrainingTask(
         "Pilot Expert",
-        Stat.WPN,
+        Stat.PLT,
         TrainingQuality.TRAINING_3,
         new StatsSet(
             0,
@@ -841,7 +841,7 @@ export default class TrainingTask {
 
     static RPR_COMMON = new TrainingTask(
         "Repair Guide",
-        Stat.WPN,
+        Stat.RPR,
         TrainingQuality.COMMON,
         new StatsSet(
             0,
@@ -857,7 +857,7 @@ export default class TrainingTask {
 
     static RPR_ELITE = new TrainingTask(
         "New Repair Guide",
-        Stat.WPN,
+        Stat.RPR,
         TrainingQuality.ELITE,
         new StatsSet(
             0,
@@ -873,7 +873,7 @@ export default class TrainingTask {
 
     static RPR_UNIQUE = new TrainingTask(
         "Advanced Repair Guide",
-        Stat.WPN,
+        Stat.RPR,
         TrainingQuality.UNIQUE,
         new StatsSet(
             0,
@@ -889,7 +889,7 @@ export default class TrainingTask {
 
     static RPR_EPIC = new TrainingTask(
         "Epic Repair Guide",
-        Stat.WPN,
+        Stat.RPR,
         TrainingQuality.EPIC,
         new StatsSet(
             0,
@@ -905,7 +905,7 @@ export default class TrainingTask {
 
     static RPR_HERO = new TrainingTask(
         "Lost Repair Guide",
-        Stat.WPN,
+        Stat.RPR,
         TrainingQuality.HERO,
         new StatsSet(
             0,
@@ -921,7 +921,7 @@ export default class TrainingTask {
 
     static RPR_SPECIAL = new TrainingTask(
         "Special Repair Guide",
-        Stat.WPN,
+        Stat.RPR,
         TrainingQuality.SPECIAL,
         new StatsSet(
             0,
@@ -937,7 +937,7 @@ export default class TrainingTask {
 
     static RPR_LEGENDARY = new TrainingTask(
         "Legendary Repair Guide",
-        Stat.WPN,
+        Stat.RPR,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             0,
@@ -953,7 +953,7 @@ export default class TrainingTask {
 
     static SCI_COMMON = new TrainingTask(
         "Drop of Brain Juice",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.COMMON,
         new StatsSet(
             0,
@@ -969,7 +969,7 @@ export default class TrainingTask {
 
     static SCI_ELITE = new TrainingTask(
         "Sliver of Brain Juice",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.ELITE,
         new StatsSet(
             0,
@@ -985,7 +985,7 @@ export default class TrainingTask {
 
     static SCI_UNIQUE = new TrainingTask(
         "Brew of Brain Juice",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.UNIQUE,
         new StatsSet(
             0,
@@ -1001,7 +1001,7 @@ export default class TrainingTask {
 
     static SCI_EPIC = new TrainingTask(
         "Tincture of Brain Juice",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.EPIC,
         new StatsSet(
             0,
@@ -1017,7 +1017,7 @@ export default class TrainingTask {
 
     static SCI_HERO = new TrainingTask(
         "Solution of Brain Juice",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.HERO,
         new StatsSet(
             0,
@@ -1033,7 +1033,7 @@ export default class TrainingTask {
 
     static SCI_SPECIAL = new TrainingTask(
         "Concentration of Brain Juice",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.SPECIAL,
         new StatsSet(
             0,
@@ -1049,7 +1049,7 @@ export default class TrainingTask {
 
     static SCI_LEGENDARY = new TrainingTask(
         "Elixir of Brain Juice",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             0,
@@ -1065,7 +1065,7 @@ export default class TrainingTask {
 
     static SCI_TRAINING_1 = new TrainingTask(
         "Big Book of Science",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.TRAINING_1,
         new StatsSet(
             0,
@@ -1081,7 +1081,7 @@ export default class TrainingTask {
 
     static SCI_TRAINING_2 = new TrainingTask(
         "Scientific Summit",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.TRAINING_2,
         new StatsSet(
             0,
@@ -1097,7 +1097,7 @@ export default class TrainingTask {
 
     static SCI_TRAINING_3 = new TrainingTask(
         "Science PHD",
-        Stat.WPN,
+        Stat.SCI,
         TrainingQuality.TRAINING_3,
         new StatsSet(
             0,
@@ -1113,7 +1113,7 @@ export default class TrainingTask {
 
     static STA_COMMON = new TrainingTask(
         "Small Cola",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.COMMON,
         new StatsSet(
             1,
@@ -1129,7 +1129,7 @@ export default class TrainingTask {
 
     static STA_ELITE = new TrainingTask(
         "Large Cola",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.ELITE,
         new StatsSet(
             1,
@@ -1145,7 +1145,7 @@ export default class TrainingTask {
 
     static STA_UNIQUE = new TrainingTask(
         "Mountain Brew",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.UNIQUE,
         new StatsSet(
             2,
@@ -1161,7 +1161,7 @@ export default class TrainingTask {
 
     static STA_EPIC = new TrainingTask(
         "Pink Cow",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.EPIC,
         new StatsSet(
             3,
@@ -1177,7 +1177,7 @@ export default class TrainingTask {
 
     static STA_HERO = new TrainingTask(
         "Large Pink Cow",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.HERO,
         new StatsSet(
             4,
@@ -1193,7 +1193,7 @@ export default class TrainingTask {
 
     static STA_SPECIAL = new TrainingTask(
         "U",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.SPECIAL,
         new StatsSet(
             3,
@@ -1209,7 +1209,7 @@ export default class TrainingTask {
 
     static STA_LEGENDARY = new TrainingTask(
         "Father",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.LEGENDARY,
         new StatsSet(
             2,
@@ -1225,7 +1225,7 @@ export default class TrainingTask {
 
     static STA_TRAINING_1 = new TrainingTask(
         "Weighted Run",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.TRAINING_1,
         new StatsSet(
             0,
@@ -1241,7 +1241,7 @@ export default class TrainingTask {
 
     static STA_TRAINING_2 = new TrainingTask(
         "Hardcore Aerobics",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.TRAINING_2,
         new StatsSet(
             2,
@@ -1257,7 +1257,7 @@ export default class TrainingTask {
 
     static STA_TRAINING_3 = new TrainingTask(
         "Everest Climb",
-        Stat.WPN,
+        Stat.STA,
         TrainingQuality.TRAINING_3,
         new StatsSet(
             3,
