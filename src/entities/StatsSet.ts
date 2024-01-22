@@ -1,6 +1,6 @@
 import Stat from "./Stat";
 
-export default class CrewStatsSet {
+export default class StatsSet {
     private _stats = new Map<Stat, number>();
 
     constructor(
@@ -33,47 +33,47 @@ export default class CrewStatsSet {
         this._stats.set(stat, value)
     }
 
-    withHp(value: number): CrewStatsSet {
+    withHp(value: number): StatsSet {
         this._stats.set(Stat.HP, value)
         return this
     }
 
-    withAtk(value: number): CrewStatsSet {
+    withAtk(value: number): StatsSet {
         this._stats.set(Stat.ATK, value)
         return this
     }
 
-    withRpr(value: number): CrewStatsSet {
+    withRpr(value: number): StatsSet {
         this._stats.set(Stat.RPR, value)
         return this
     }
 
-    withAbl(value: number): CrewStatsSet {
+    withAbl(value: number): StatsSet {
         this._stats.set(Stat.ABL, value)
         return this
     }
 
-    withSta(value: number): CrewStatsSet {
+    withSta(value: number): StatsSet {
         this._stats.set(Stat.STA, value)
         return this
     }
 
-    withPlt(value: number): CrewStatsSet {
+    withPlt(value: number): StatsSet {
         this._stats.set(Stat.PLT, value)
         return this
     }
 
-    withSci(value: number): CrewStatsSet {
+    withSci(value: number): StatsSet {
         this._stats.set(Stat.SCI, value)
         return this
     }
 
-    withEng(value: number): CrewStatsSet {
+    withEng(value: number): StatsSet {
         this._stats.set(Stat.ENG, value)
         return this
     }
 
-    withWpn(value: number): CrewStatsSet {
+    withWpn(value: number): StatsSet {
         this._stats.set(Stat.WPN, value)
         return this
     }
