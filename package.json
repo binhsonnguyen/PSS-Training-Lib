@@ -1,11 +1,16 @@
 {
   "name": "pss-training-lib",
-  "version": "0.0.5",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "npm version patch && npm run build",
+    "build": "tsc",
     "test": "jest"
   },
+  "files": [
+    "build"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
