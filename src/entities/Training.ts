@@ -55,4 +55,57 @@ export default class Training {
         return DecimalAdjust.floor(factor, -4)
     }
 
+    maximumPossibleImprovement(stat: Stat) {
+        if (this.traingTask.isMainStat(stat) && this.fatigue100()) {
+            return Guaranteed.forQuality(this.traingTask.quality);
+        } else if (this.fatigue1to50()
+            && this.traingTask.trainingEffect(stat)
+            / this.requiredConsumerableFactor(stat)
+            > 1.5) {
+            return this.statGainFactor(stat)
+        } else {
+            const factor = this.statGainFactor(stat);
+            const multiplier = StatGainMultiplier.forFatigue(this.fatigue);
+            const statGain = factor * multiplier;
+            if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainningStat()) {
+                const guaranted = Guaranteed.forQuality(this.traingTask.quality);
+                if (statGain < guaranted) {
+                    return guaranted;
+                } else {
+                    return statGain;
+                }
+            } else {
+                return statGain
+            }
+        }
+    }
+
+    private statGainFactor(stat: Stat) {
+        const factor1 = this.traingTask.trainingEffect(stat)
+        const factor2 = 1 - this.currentTraining.total() / this.totalTrainingPoint
+        const factor3 = 1 - this.currentTraining.get(stat) / this.totalTrainingPoint
+        const factor = factor1 * factor2 * factor3
+        return DecimalAdjust.floor(factor, 0)
+    }
+
+    private noFatigue() {
+        return this.fatigue == 0;
+    }
+
+    private fatigue1to50() {
+        return 1 <= this.fatigue && this.fatigue <= 50;
+    }
+
+    private fatigue51to99() {
+        return 51 <= this.fatigue && this.fatigue <= 99;
+    }
+
+    private fatigue100() {
+        return this.fatigue == 100
+    }
+
+    private maximumEffectivenessFactor(stat: Stat) {
+
+    }
+
 }
