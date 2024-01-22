@@ -25,8 +25,8 @@ export default class StatsSet {
         this._stats.set(Stat.WPN, wpn);
     }
 
-    get(stat: Stat) {
-        return this._stats.get(stat)
+    get(stat: Stat): number {
+        return <number>this._stats.get(stat)
     }
 
     set(stat: Stat, value: number) {
@@ -76,5 +76,11 @@ export default class StatsSet {
     withWpn(value: number): StatsSet {
         this._stats.set(Stat.WPN, value)
         return this
+    }
+
+    total() {
+        let total = 0
+        this._stats.forEach(value => total += value);
+        return total
     }
 }
