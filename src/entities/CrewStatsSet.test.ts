@@ -1,5 +1,4 @@
 import {describe, expect, test} from '@jest/globals';
-import CrewStat from "./CrewStat"
 import CrewStatsSet from "./CrewStatsSet";
 
 test('test Crew Stats Set', () => {
