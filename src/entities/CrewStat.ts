@@ -1,38 +1,39 @@
+import CrewStatName from "./CrewStatName";
 
 export default class CrewStat {
 
     static HP(value: number = 0) {
-        return new CrewStat("HP", value)
+        return new CrewStat(CrewStatName.HP, value)
     }
     static ATK(value: number = 0) {
-        return new CrewStat("ATK", value)
+        return new CrewStat(CrewStatName.ATK, value)
     }
     static RPR(value: number = 0) {
-        return new CrewStat("RPR", value)
+        return new CrewStat(CrewStatName.RPR, value)
     }
     static ABL(value: number = 0) {
-        return new CrewStat("ABL", value)
+        return new CrewStat(CrewStatName.ABL, value)
     }
     static STA(value: number = 0) {
-        return new CrewStat("STA", value)
+        return new CrewStat(CrewStatName.STA, value)
     }
     static PLT(value: number = 0) {
-        return new CrewStat("PLT", value)
+        return new CrewStat(CrewStatName.PLT, value)
     }
     static SCI(value: number = 0) {
-        return new CrewStat("SCI", value)
+        return new CrewStat(CrewStatName.SCI, value)
     }
     static ENG(value: number = 0) {
-        return new CrewStat("ENG", value)
+        return new CrewStat(CrewStatName.ENG, value)
     }
     static WPN(value: number = 0) {
-        return new CrewStat("WPN", value)
+        return new CrewStat(CrewStatName.WPN, value)
     }
 
-    private _name: string;
+    private _name: CrewStatName;
     private _value: number;
 
-    private constructor(name: string, value: number) {
+    private constructor(name: CrewStatName, value: number) {
         this._name = name;
         this._value = value;
     }
@@ -48,7 +49,7 @@ export default class CrewStat {
         this.value += amount
     }
 
-    get name(): string {
+    get name(): CrewStatName {
         return this._name;
     }
 }
