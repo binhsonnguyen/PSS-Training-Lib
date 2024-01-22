@@ -1,6 +1,4 @@
 import {expect, test} from "@jest/globals";
-import TrainingTask from "./TrainingQuality";
-import TrainingQuality from "./TrainingQuality";
 import PossibleImprovement from "./PossibleImprovement";
 
 test('test Crew Training Task', () => {
