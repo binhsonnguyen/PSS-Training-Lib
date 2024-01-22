@@ -21,12 +21,14 @@ export default class TrainingTask {
     get statsEffective(): CrewStatsSet {
         return this._statsEffective;
     }
+
     get quality(): TrainingQuality {
         return this._quality;
     }
 
+    
     static ABL_COMMON = new TrainingTask(
-        "ABL_COMMON",
+        "Paracetamol",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -39,8 +41,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ABL_ELITE = new TrainingTask(
-        "ABL_ELITE",
+        "Paracetamol Rapid",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(2),
@@ -53,8 +56,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ABL_UNIQUE = new TrainingTask(
-        "ABL_UNIQUE",
+        "Ibuprofen",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(3),
@@ -67,8 +71,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(1),
         ))
+    
     static ABL_EPIC = new TrainingTask(
-        "ABL_EPIC",
+        "Ibuprofen Rapid",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(5),
@@ -81,8 +86,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(2),
         ))
+    
     static ABL_HERO = new TrainingTask(
-        "ABL_HERO",
+        "Ginkgo",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(12),
@@ -95,8 +101,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(3),
         ))
+    
     static ABL_SPECIAL = new TrainingTask(
-        "ABL_SPECIAL",
+        "Brain Enhancer",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(8),
@@ -109,8 +116,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(2),
         ))
+    
     static ABL_LEGENDARY = new TrainingTask(
-        "ABL_LEGENDARY",
+        "Super Brain Enhancer",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(3),
@@ -123,8 +131,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(1),
         ))
+    
     static ABL_TRAINING_1 = new TrainingTask(
-        "ABL_TRAINING_1",
+        "Steam Yoga",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -137,8 +146,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ABL_TRAINING_2 = new TrainingTask(
-        "ABL_TRAINING_2",
+        "Crew vs Wild",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -151,8 +161,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ABL_TRAINING_3 = new TrainingTask(
-        "ABL_TRAINING_3",
+        "Space Marine",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -165,8 +176,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ATK_COMMON = new TrainingTask(
-        "ATK_COMMON",
+        "Chicken Skewer",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -179,8 +191,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(1),
         ))
+    
     static ATK_ELITE = new TrainingTask(
-        "ATK_ELITE",
+        "Yakitori",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -193,8 +206,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(2),
         ))
+    
     static ATK_UNIQUE = new TrainingTask(
-        "ATK_UNIQUE",
+        "Double Yakitori",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -207,8 +221,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(3),
         ))
+    
     static ATK_EPIC = new TrainingTask(
-        "ATK_EPIC",
+        "Shish Kebabs",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(2),
@@ -221,8 +236,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(5),
         ))
+    
     static ATK_HERO = new TrainingTask(
-        "ATK_HERO",
+        "Drumsticks",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(3),
@@ -235,8 +251,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(12),
         ))
+    
     static ATK_SPECIAL = new TrainingTask(
-        "ATK_SPECIAL",
+        "Steak",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(2),
@@ -249,8 +266,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(8),
         ))
+    
     static ATK_LEGENDARY = new TrainingTask(
-        "ATK_LEGENDARY",
+        "Roast Turkey",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -263,8 +281,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(3),
         ))
+    
     static ATK_TRAINING_1 = new TrainingTask(
-        "ATK_TRAINING_1",
+        "Kickbox",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -277,8 +296,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ATK_TRAINING_2 = new TrainingTask(
-        "ATK_TRAINING_2",
+        "BJJ",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -291,8 +311,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ATK_TRAINING_3 = new TrainingTask(
-        "ATK_TRAINING_3",
+        "Shaolin Tradition",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -305,8 +326,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static ENG_COMMON = new TrainingTask(
-        "ENG_COMMON",
+        "Standard Engineering Tool Kit",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -319,8 +341,9 @@ export default class TrainingTask {
             CrewStat.ENG(2),
             CrewStat.WPN(0),
         ))
+    
     static ENG_ELITE = new TrainingTask(
-        "ENG_ELITE",
+        "Obsolete Engineering Toolkit",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -333,8 +356,9 @@ export default class TrainingTask {
             CrewStat.ENG(4),
             CrewStat.WPN(0),
         ))
+    
     static ENG_UNIQUE = new TrainingTask(
-        "ENG_UNIQUE",
+        "Starter Engineering Tool Kit ",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -347,8 +371,9 @@ export default class TrainingTask {
             CrewStat.ENG(8),
             CrewStat.WPN(0),
         ))
+    
     static ENG_EPIC = new TrainingTask(
-        "ENG_EPIC",
+        "Advanced Engineering Tool Kit",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -361,8 +386,9 @@ export default class TrainingTask {
             CrewStat.ENG(16),
             CrewStat.WPN(0),
         ))
+    
     static ENG_HERO = new TrainingTask(
-        "ENG_HERO",
+        "Rare Engineering Tool Kit",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -375,8 +401,9 @@ export default class TrainingTask {
             CrewStat.ENG(25),
             CrewStat.WPN(0),
         ))
+    
     static ENG_SPECIAL = new TrainingTask(
-        "ENG_SPECIAL",
+        "Prototype Engineering Tool Kit",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -389,8 +416,9 @@ export default class TrainingTask {
             CrewStat.ENG(50),
             CrewStat.WPN(0),
         ))
+    
     static ENG_LEGENDARY = new TrainingTask(
-        "ENG_LEGENDARY",
+        "Alien Engineering Tool Kit",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -403,8 +431,9 @@ export default class TrainingTask {
             CrewStat.ENG(100),
             CrewStat.WPN(0),
         ))
+    
     static ENG_TRAINING_1 = new TrainingTask(
-        "ENG_TRAINING_1",
+        "Study Expert Engineering Manual",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -417,8 +446,9 @@ export default class TrainingTask {
             CrewStat.ENG(4),
             CrewStat.WPN(0),
         ))
+    
     static ENG_TRAINING_2 = new TrainingTask(
-        "ENG_TRAINING_2",
+        "Engineering Summit",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -431,8 +461,9 @@ export default class TrainingTask {
             CrewStat.ENG(8),
             CrewStat.WPN(0),
         ))
+    
     static ENG_TRAINING_3 = new TrainingTask(
-        "ENG_TRAINING_3",
+        "Engineering PHD",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -445,8 +476,9 @@ export default class TrainingTask {
             CrewStat.ENG(12),
             CrewStat.WPN(1),
         ))
+    
     static HP_COMMON = new TrainingTask(
-        "HP_COMMON",
+        "Small Protein Shake",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(2),
@@ -459,8 +491,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(0),
         ))
+    
     static HP_ELITE = new TrainingTask(
-        "HP_ELITE",
+        "Regular Protein Shake",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(4),
@@ -473,8 +506,9 @@ export default class TrainingTask {
             CrewStat.ENG(2),
             CrewStat.WPN(0),
         ))
+    
     static HP_UNIQUE = new TrainingTask(
-        "HP_UNIQUE",
+        "Large Protein Shake",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(8),
@@ -487,8 +521,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(0),
         ))
+    
     static HP_EPIC = new TrainingTask(
-        "HP_EPIC",
+        "Super Protein Shake",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(16),
@@ -501,8 +536,9 @@ export default class TrainingTask {
             CrewStat.ENG(5),
             CrewStat.WPN(0),
         ))
+    
     static HP_HERO = new TrainingTask(
-        "HP_HERO",
+        "HGH",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(25),
@@ -515,8 +551,9 @@ export default class TrainingTask {
             CrewStat.ENG(12),
             CrewStat.WPN(0),
         ))
+    
     static HP_SPECIAL = new TrainingTask(
-        "HP_SPECIAL",
+        "Enhanced HGH",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(50),
@@ -529,8 +566,9 @@ export default class TrainingTask {
             CrewStat.ENG(8),
             CrewStat.WPN(0),
         ))
+    
     static HP_LEGENDARY = new TrainingTask(
-        "HP_LEGENDARY",
+        "Prototype HGH",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(100),
@@ -543,8 +581,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(0),
         ))
+    
     static HP_TRAINING_1 = new TrainingTask(
-        "HP_TRAINING_1",
+        "Bench Press",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(4),
@@ -557,8 +596,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static HP_TRAINING_2 = new TrainingTask(
-        "HP_TRAINING_2",
+        "Muscle Beach",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(8),
@@ -571,8 +611,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static HP_TRAINING_3 = new TrainingTask(
-        "HP_TRAINING_3",
+        "Olympic Weightlifting",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(12),
@@ -585,8 +626,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static PLT_COMMON = new TrainingTask(
-        "PLT_COMMON",
+        "Street Map",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -599,8 +641,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(1),
         ))
+    
     static PLT_ELITE = new TrainingTask(
-        "PLT_ELITE",
+        "Travel Map",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -613,8 +656,9 @@ export default class TrainingTask {
             CrewStat.ENG(2),
             CrewStat.WPN(2),
         ))
+    
     static PLT_UNIQUE = new TrainingTask(
-        "PLT_UNIQUE",
+        "World Map",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -627,8 +671,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(3),
         ))
+    
     static PLT_EPIC = new TrainingTask(
-        "PLT_EPIC",
+        "Global Map",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -641,8 +686,9 @@ export default class TrainingTask {
             CrewStat.ENG(5),
             CrewStat.WPN(5),
         ))
+    
     static PLT_HERO = new TrainingTask(
-        "PLT_HERO",
+        "System Map",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -655,8 +701,9 @@ export default class TrainingTask {
             CrewStat.ENG(12),
             CrewStat.WPN(12),
         ))
+    
     static PLT_SPECIAL = new TrainingTask(
-        "PLT_SPECIAL",
+        "Star Map",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -669,8 +716,9 @@ export default class TrainingTask {
             CrewStat.ENG(8),
             CrewStat.WPN(8),
         ))
+    
     static PLT_LEGENDARY = new TrainingTask(
-        "PLT_LEGENDARY",
+        "Galactic Navigation Map",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -683,8 +731,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(3),
         ))
+    
     static PLT_TRAINING_1 = new TrainingTask(
-        "PLT_TRAINING_1",
+        "Read Expert Pilot Handbook",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -697,8 +746,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(1),
         ))
+    
     static PLT_TRAINING_2 = new TrainingTask(
-        "PLT_TRAINING_2",
+        "Pilot Summit",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -711,8 +761,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(1),
         ))
+    
     static PLT_TRAINING_3 = new TrainingTask(
-        "PLT_TRAINING_3",
+        "Pilot Expert",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -725,8 +776,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(2),
         ))
+    
     static RPR_COMMON = new TrainingTask(
-        "RPR_COMMON",
+        "Repair Guide",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -739,8 +791,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(0),
         ))
+    
     static RPR_ELITE = new TrainingTask(
-        "RPR_ELITE",
+        "New Repair Guide",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -753,8 +806,9 @@ export default class TrainingTask {
             CrewStat.ENG(2),
             CrewStat.WPN(0),
         ))
+    
     static RPR_UNIQUE = new TrainingTask(
-        "RPR_UNIQUE",
+        "Advanced Repair Guide",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -767,8 +821,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(0),
         ))
+    
     static RPR_EPIC = new TrainingTask(
-        "RPR_EPIC",
+        "Epic Repair Guide",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -781,8 +836,9 @@ export default class TrainingTask {
             CrewStat.ENG(5),
             CrewStat.WPN(0),
         ))
+    
     static RPR_HERO = new TrainingTask(
-        "RPR_HERO",
+        "Lost Repair Guide",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -795,8 +851,9 @@ export default class TrainingTask {
             CrewStat.ENG(12),
             CrewStat.WPN(0),
         ))
+    
     static RPR_SPECIAL = new TrainingTask(
-        "RPR_SPECIAL",
+        "Special Repair Guide",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -809,8 +866,9 @@ export default class TrainingTask {
             CrewStat.ENG(8),
             CrewStat.WPN(0),
         ))
+    
     static RPR_LEGENDARY = new TrainingTask(
-        "RPR_LEGENDARY",
+        "Legendary Repair Guide",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -823,8 +881,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(0),
         ))
+    
     static SCI_COMMON = new TrainingTask(
-        "SCI_COMMON",
+        "Drop of Brain Juice",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -837,8 +896,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static SCI_ELITE = new TrainingTask(
-        "SCI_ELITE",
+        "Sliver of Brain Juice",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -851,8 +911,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static SCI_UNIQUE = new TrainingTask(
-        "SCI_UNIQUE",
+        "Brew of Brain Juice",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -865,8 +926,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(1),
         ))
+    
     static SCI_EPIC = new TrainingTask(
-        "SCI_EPIC",
+        "Tincture of Brain Juice",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -879,8 +941,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(2),
         ))
+    
     static SCI_HERO = new TrainingTask(
-        "SCI_HERO",
+        "Solution of Brain Juice",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -893,8 +956,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(3),
         ))
+    
     static SCI_SPECIAL = new TrainingTask(
-        "SCI_SPECIAL",
+        "Concentration of Brain Juice",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -907,8 +971,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(2),
         ))
+    
     static SCI_LEGENDARY = new TrainingTask(
-        "SCI_LEGENDARY",
+        "Elixir of Brain Juice",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -921,8 +986,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(1),
         ))
+    
     static SCI_TRAINING_1 = new TrainingTask(
-        "SCI_TRAINING_1",
+        "Big Book of Science",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -935,8 +1001,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(0),
         ))
+    
     static SCI_TRAINING_2 = new TrainingTask(
-        "SCI_TRAINING_2",
+        "Scientific Summit",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -949,8 +1016,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(1),
         ))
+    
     static SCI_TRAINING_3 = new TrainingTask(
-        "SCI_TRAINING_3",
+        "Science PHD",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -963,8 +1031,9 @@ export default class TrainingTask {
             CrewStat.ENG(2),
             CrewStat.WPN(1),
         ))
+    
     static STA_COMMON = new TrainingTask(
-        "STA_COMMON",
+        "Small Cola",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -977,8 +1046,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(1),
         ))
+    
     static STA_ELITE = new TrainingTask(
-        "STA_ELITE",
+        "Large Cola",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(1),
@@ -991,8 +1061,9 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(1),
         ))
+    
     static STA_UNIQUE = new TrainingTask(
-        "STA_UNIQUE",
+        "Mountain Brew",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(2),
@@ -1005,8 +1076,9 @@ export default class TrainingTask {
             CrewStat.ENG(2),
             CrewStat.WPN(2),
         ))
+    
     static STA_EPIC = new TrainingTask(
-        "STA_EPIC",
+        "Pink Cow",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(3),
@@ -1019,8 +1091,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(3),
         ))
+    
     static STA_HERO = new TrainingTask(
-        "STA_HERO",
+        "Large Pink Cow",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(4),
@@ -1033,8 +1106,9 @@ export default class TrainingTask {
             CrewStat.ENG(4),
             CrewStat.WPN(4),
         ))
+    
     static STA_SPECIAL = new TrainingTask(
-        "STA_SPECIAL",
+        "U",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(3),
@@ -1047,8 +1121,9 @@ export default class TrainingTask {
             CrewStat.ENG(3),
             CrewStat.WPN(3),
         ))
+    
     static STA_LEGENDARY = new TrainingTask(
-        "STA_LEGENDARY",
+        "Father",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(2),
@@ -1061,8 +1136,9 @@ export default class TrainingTask {
             CrewStat.ENG(2),
             CrewStat.WPN(2),
         ))
+    
     static STA_TRAINING_1 = new TrainingTask(
-        "STA_TRAINING_1",
+        "Weighted Run",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1075,8 +1151,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static STA_TRAINING_2 = new TrainingTask(
-        "STA_TRAINING_2",
+        "Hardcore Aerobics",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(2),
@@ -1089,8 +1166,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static STA_TRAINING_3 = new TrainingTask(
-        "STA_TRAINING_3",
+        "Everest Climb",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(3),
@@ -1103,8 +1181,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(0),
         ))
+    
     static WPN_COMMON = new TrainingTask(
-        "WPN_COMMON",
+        "Military Recruit Handbook",
         TrainingQuality.COMMON,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1117,8 +1196,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(2),
         ))
+    
     static WPN_ELITE = new TrainingTask(
-        "WPN_ELITE",
+        "Standard Combat Manual",
         TrainingQuality.ELITE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1131,8 +1211,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(4),
         ))
+    
     static WPN_UNIQUE = new TrainingTask(
-        "WPN_UNIQUE",
+        "Galetrooper Training Manual",
         TrainingQuality.UNIQUE,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1145,8 +1226,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(8),
         ))
+    
     static WPN_EPIC = new TrainingTask(
-        "WPN_EPIC",
+        "Advanced Combat Manual",
         TrainingQuality.EPIC,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1159,8 +1241,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(16),
         ))
+    
     static WPN_HERO = new TrainingTask(
-        "WPN_HERO",
+        "Veteran’s Guidebook",
         TrainingQuality.HERO,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1173,8 +1256,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(25),
         ))
+    
     static WPN_SPECIAL = new TrainingTask(
-        "WPN_SPECIAL",
+        "How To Shoot Your Shot'",
         TrainingQuality.SPECIAL,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1187,8 +1271,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(50),
         ))
+    
     static WPN_LEGENDARY = new TrainingTask(
-        "WPN_LEGENDARY",
+        "Sharpshooter’s Cheatbook",
         TrainingQuality.LEGENDARY,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1201,8 +1286,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(100),
         ))
+    
     static WPN_TRAINING_1 = new TrainingTask(
-        "WPN_TRAINING_1",
+        "Read Expert Weapon Theory",
         TrainingQuality.TRAINING_1,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1215,8 +1301,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(4),
         ))
+    
     static WPN_TRAINING_2 = new TrainingTask(
-        "WPN_TRAINING_2",
+        "Weapons Summit",
         TrainingQuality.TRAINING_2,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1229,8 +1316,9 @@ export default class TrainingTask {
             CrewStat.ENG(0),
             CrewStat.WPN(8),
         ))
+    
     static WPN_TRAINING_3 = new TrainingTask(
-        "WPN_TRAINING_3",
+        "Weapons PHD",
         TrainingQuality.TRAINING_3,
         new CrewStatsSet(
             CrewStat.HP(0),
@@ -1243,4 +1331,5 @@ export default class TrainingTask {
             CrewStat.ENG(1),
             CrewStat.WPN(12),
         ))
+
 }
