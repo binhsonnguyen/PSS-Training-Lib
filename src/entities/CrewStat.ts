@@ -1,40 +1,40 @@
-import CrewStatName from "./CrewStatName";
+import Stat from "./Stat";
 
 export default class CrewStat {
 
     static HP(value: number = 0) {
-        return new CrewStat(CrewStatName.HP, value)
+        return new CrewStat(Stat.HP, value)
     }
     static ATK(value: number = 0) {
-        return new CrewStat(CrewStatName.ATK, value)
+        return new CrewStat(Stat.ATK, value)
     }
     static RPR(value: number = 0) {
-        return new CrewStat(CrewStatName.RPR, value)
+        return new CrewStat(Stat.RPR, value)
     }
     static ABL(value: number = 0) {
-        return new CrewStat(CrewStatName.ABL, value)
+        return new CrewStat(Stat.ABL, value)
     }
     static STA(value: number = 0) {
-        return new CrewStat(CrewStatName.STA, value)
+        return new CrewStat(Stat.STA, value)
     }
     static PLT(value: number = 0) {
-        return new CrewStat(CrewStatName.PLT, value)
+        return new CrewStat(Stat.PLT, value)
     }
     static SCI(value: number = 0) {
-        return new CrewStat(CrewStatName.SCI, value)
+        return new CrewStat(Stat.SCI, value)
     }
     static ENG(value: number = 0) {
-        return new CrewStat(CrewStatName.ENG, value)
+        return new CrewStat(Stat.ENG, value)
     }
     static WPN(value: number = 0) {
-        return new CrewStat(CrewStatName.WPN, value)
+        return new CrewStat(Stat.WPN, value)
     }
 
-    private _name: CrewStatName;
+    private _stat: Stat;
     private _value: number;
 
-    private constructor(name: CrewStatName, value: number) {
-        this._name = name;
+    private constructor(stat: Stat, value: number) {
+        this._stat = stat;
         this._value = value;
     }
     get value(): number {
@@ -49,7 +49,7 @@ export default class CrewStat {
         this.value += amount
     }
 
-    get name(): CrewStatName {
-        return this._name;
+    get stat(): Stat {
+        return this._stat;
     }
 }
