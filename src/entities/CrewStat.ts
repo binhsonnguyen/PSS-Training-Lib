@@ -2,31 +2,31 @@ import {name} from "ts-jest/dist/transformers/hoist-jest";
 
 export default class CrewStat {
 
-    static HP(value: number) {
+    static HP(value: number = 0) {
         return new CrewStat("HP", value)
     }
-    static ATK(value: number) {
+    static ATK(value: number = 0) {
         return new CrewStat("ATK", value)
     }
-    static RPR(value: number) {
+    static RPR(value: number = 0) {
         return new CrewStat("RPR", value)
     }
-    static ABL(value: number) {
+    static ABL(value: number = 0) {
         return new CrewStat("ABL", value)
     }
-    static STA(value: number) {
+    static STA(value: number = 0) {
         return new CrewStat("STA", value)
     }
-    static PLT(value: number) {
+    static PLT(value: number = 0) {
         return new CrewStat("PLT", value)
     }
-    static SCI(value: number) {
+    static SCI(value: number = 0) {
         return new CrewStat("SCI", value)
     }
-    static ENG(value: number) {
+    static ENG(value: number = 0) {
         return new CrewStat("ENG", value)
     }
-    static WPN(value: number) {
+    static WPN(value: number = 0) {
         return new CrewStat("WPN", value)
     }
 
