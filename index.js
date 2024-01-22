@@ -1,3 +1,3 @@
-exports.PssTraing = function PssTraing() {
-    console.log("Node.js is awesome!");
-}
+const PssTraining = require('./pss_training.js');
+
+exports.PssTraing = PssTraining
