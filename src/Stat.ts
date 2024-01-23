@@ -19,4 +19,15 @@ export default class Stat {
     static SCI = new Stat("SCI")
     static ENG = new Stat("ENG")
     static WPN = new Stat("WPN")
+    static ALL: Stat[] = [
+        Stat.HP,
+        Stat.ATK,
+        Stat.RPR,
+        Stat.ABL,
+        Stat.STA,
+        Stat.PLT,
+        Stat.SCI,
+        Stat.ENG,
+        Stat.WPN
+    ]
 }
