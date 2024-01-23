@@ -44,7 +44,7 @@ export default class Training {
         return this._currentTraining;
     }
 
-    requiredConsumerableFactor(stat: Stat) {
+    requiredStatEffect(stat: Stat): number {
         let factor1 = 1 - this.currentTraining.total() / this.totalTrainingPoint
         let factor2 = 1 - this.currentTraining.get(stat) / this.totalTrainingPoint
         let factor3 = this.statGainMultiplier()
@@ -52,10 +52,10 @@ export default class Training {
         return DecimalAdjust.floor(factor, -4)
     }
 
-    maximumPossibleImprovement(stat: Stat) {
+    maximumPossibleImprovement(stat: Stat): number {
         if (this.traingTask.isMainStat(stat) && this.fatigue100()) {
             return Guaranteed.forQuality(this.traingTask.quality);
-        } else if (this.fatigue1to50() && this.traingTask.trainingEffect(stat) / this.requiredConsumerableFactor(stat) > 1.5) {
+        } else if (this.fatigue1to50() && this.traingTask.trainingEffect(stat) / this.requiredStatEffect(stat) > 1.5) {
             return this.statGainFactor(stat)
         } else {
             const factor = this.statGainFactor(stat);
@@ -74,7 +74,15 @@ export default class Training {
         }
     }
 
-    private statGain(stat: Stat, factor: number, multiplier: number) {
+    minimumPossibleImprovement(stat: Stat): number {
+        if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainningStat()) {
+            return Guaranteed.forQuality(this.traingTask.quality)
+        } else {
+            return 0
+        }
+    }
+
+    private statGain(stat: Stat, factor: number, multiplier: number): number {
         if (stat == Stat.STA) {
             return DecimalAdjust.ceil(factor * multiplier, 0);
         } else {
@@ -94,26 +102,26 @@ export default class Training {
         }
     }
 
-    private statGainFactor(stat: Stat) {
+    private statGainFactor(stat: Stat): number {
         const factor1 = this.traingTask.trainingEffect(stat)
         const factor2 = 1 - this.currentTraining.total() / this.totalTrainingPoint
         const factor3 = 1 - this.currentTraining.get(stat) / this.totalTrainingPoint
         return factor1 * factor2 * factor3
     }
 
-    private noFatigue() {
+    private noFatigue(): boolean {
         return this.fatigue == 0;
     }
 
-    private fatigue1to50() {
+    private fatigue1to50(): boolean {
         return 1 <= this.fatigue && this.fatigue <= 50;
     }
 
-    private fatigue51to99() {
+    private fatigue51to99(): boolean {
         return 51 <= this.fatigue && this.fatigue <= 99;
     }
 
-    private fatigue100() {
+    private fatigue100(): boolean {
         return this.fatigue == 100
     }
 

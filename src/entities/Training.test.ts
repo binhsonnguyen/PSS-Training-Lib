@@ -11,7 +11,7 @@ test('test Consumerable Required ', () => {
             0,
             TrainingTask.HP_COMMON,
             new StatsSet()
-        ).requiredConsumerableFactor(Stat.HP)
+        ).requiredStatEffect(Stat.HP)
     ).toBe(1)
     expect(
         new Training(
@@ -19,7 +19,7 @@ test('test Consumerable Required ', () => {
             0,
             TrainingTask.HP_COMMON,
             new StatsSet().withHp(5).withSta(3).withWpn(33)
-        ).requiredConsumerableFactor(Stat.HP)
+        ).requiredStatEffect(Stat.HP)
     ).toBe(1.6701)
 });
 
