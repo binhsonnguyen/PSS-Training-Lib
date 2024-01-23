@@ -58,3 +58,27 @@ test('test maximum possibility ', () => {
     expect(training001.maximumPossibleImprovement(Stat.STA)).toBe(2)
     expect(training001.maximumPossibleImprovement(Stat.ENG)).toBe(8)
 });
+
+test('test minimum possibility ', () => {
+    let training000 = new Training(
+        110,
+        0,
+        TrainingTask.HP_UNIQUE,
+        new StatsSet()
+    )
+    expect(training000.minimumPossibleImprovement(Stat.HP)).toBe(0)
+    expect(training000.minimumPossibleImprovement(Stat.ATK)).toBe(0)
+    expect(training000.minimumPossibleImprovement(Stat.ABL)).toBe(0)
+    expect(training000.minimumPossibleImprovement(Stat.PLT)).toBe(0)
+
+    let training001 = new Training(
+        110,
+        0,
+        TrainingTask.HP_LEGENDARY,
+        new StatsSet()
+    )
+    expect(training001.minimumPossibleImprovement(Stat.HP)).toBe(4)
+    expect(training001.minimumPossibleImprovement(Stat.ATK)).toBe(0)
+    expect(training001.minimumPossibleImprovement(Stat.ABL)).toBe(0)
+    expect(training001.minimumPossibleImprovement(Stat.PLT)).toBe(0)
+});
