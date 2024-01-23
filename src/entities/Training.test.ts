@@ -98,6 +98,4 @@ test('test sta ', () => {
     expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(2)
     training000.currentTraining.set(Stat.STA, 18)
     expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(0)
-
-
 });
