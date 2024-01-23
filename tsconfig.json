@@ -8,9 +8,9 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./build",
+    "outDir": "./dist",
     "rootDir": "./src"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "test"]
+  "exclude": ["node_modules", "test", "dist"]
 }
