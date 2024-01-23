@@ -66,7 +66,7 @@ export default class Training {
         } else {
             const factor = this.statGainFactor(stat);
             const multiplier = StatGainMultiplier.forFatigue(this.fatigue);
-            const statGain = factor * multiplier;
+            const statGain = this.statGain(stat, factor, multiplier);
             if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainningStat()) {
                 const guaranted = Guaranteed.forQuality(this.traingTask.quality);
                 if (statGain < guaranted) {
@@ -80,12 +80,19 @@ export default class Training {
         }
     }
 
+    statGain(stat: Stat, factor: number, multiplier: number) {
+        if (stat == Stat.STA) {
+            return DecimalAdjust.ceil(factor * multiplier, 0);
+        } else {
+            return DecimalAdjust.floor(factor * multiplier, 0);
+        }
+    }
+
     private statGainFactor(stat: Stat) {
         const factor1 = this.traingTask.trainingEffect(stat)
         const factor2 = 1 - this.currentTraining.total() / this.totalTrainingPoint
         const factor3 = 1 - this.currentTraining.get(stat) / this.totalTrainingPoint
-        const factor = factor1 * factor2 * factor3
-        return DecimalAdjust.floor(factor, 0)
+        return  factor1 * factor2 * factor3
     }
 
     private noFatigue() {
