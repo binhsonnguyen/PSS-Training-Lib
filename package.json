@@ -3,14 +3,15 @@
   "version": "0.9.1",
   "description": "",
   "main": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "types": "build/index.d.ts",
   "scripts": {
     "prepare": "npm version patch && npm run build",
     "build": "tsc",
     "test": "tsc && jest"
   },
-  "files": [
-    "build"
-  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
