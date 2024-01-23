@@ -82,3 +82,22 @@ test('test minimum possibility ', () => {
     expect(training001.minimumPossibleImprovement(Stat.ABL)).toBe(0)
     expect(training001.minimumPossibleImprovement(Stat.PLT)).toBe(0)
 });
+
+test('test sta ', () => {
+    let training000 = new Training(
+        110,
+        0,
+        TrainingTask.STA_COMMON,
+        new StatsSet().withHp(6).withWpn(70)
+    )
+    training000.currentTraining.set(Stat.STA, 3)
+    expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(3)
+    training000.currentTraining.set(Stat.STA, 10)
+    expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(2)
+    training000.currentTraining.set(Stat.STA, 17)
+    expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(2)
+    training000.currentTraining.set(Stat.STA, 18)
+    expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(0)
+
+
+});
