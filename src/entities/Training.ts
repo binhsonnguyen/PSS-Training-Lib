@@ -53,10 +53,12 @@ export default class Training {
     }
 
     maximumPossibleImprovement(stat: Stat): number {
-        if (this.traingTask.isMainStat(stat) && this.fatigue100()) {
+        if (this.requiredStatEffect(stat) > this.traingTask.statsEffective.get(stat)) {
+            return 0
+        } else if (this.traingTask.isMainStat(stat) && this.fatigue100()) {
             return Guaranteed.forQuality(this.traingTask.quality);
         } else if (this.fatigue1to50() && this.traingTask.trainingEffect(stat) / this.requiredStatEffect(stat) > 1.5) {
-            return this.statGainFactor(stat)
+            return this.statGainFactor(stat);
         } else {
             const factor = this.statGainFactor(stat);
             const multiplier = this.statGainMultiplier();
