@@ -38,10 +38,18 @@ export default class Training {
         return this._traingTask;
     }
 
+    set traingTask(value: TrainingTask) {
+        this._traingTask = value;
+    }
+
     private _currentTraining: StatsSet;
 
     get currentTraining(): StatsSet {
         return this._currentTraining;
+    }
+
+    set currentTraining(value: StatsSet) {
+        this._currentTraining = value;
     }
 
     requiredStatEffect(stat: Stat): number {
