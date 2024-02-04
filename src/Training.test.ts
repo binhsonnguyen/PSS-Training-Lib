@@ -60,6 +60,17 @@ test('test maximum possibility ', () => {
     expect(training001.maximumPossibleImprovement(Stat.ENG)).toBe(8)
 });
 
+test('test maximum possibility , hero', () => {
+
+    let trainingHero = new Training(
+        110,
+        0,
+        TrainingTask.WPN_HERO,
+        new StatsSet().withAbl(37).withWpn(63)
+    )
+    expect(trainingHero.maximumPossibleImprovement(Stat.WPN)).toBe(1)
+});
+
 test('test minimum possibility ', () => {
     let training000 = new Training(
         110,
@@ -84,7 +95,7 @@ test('test minimum possibility ', () => {
     expect(training001.minimumPossibleImprovement(Stat.PLT)).toBe(0)
 });
 
-test('test sta ', () => {
+test('test sta common', () => {
     let training000 = new Training(
         110,
         0,
@@ -99,4 +110,14 @@ test('test sta ', () => {
     expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(2)
     training000.currentTraining.set(Stat.STA, 18)
     expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(0)
+});
+
+test('test sta hero', () => {
+    let training000 = new Training(
+        110,
+        0,
+        TrainingTask.STA_HERO,
+        new StatsSet().withHp(1).withWpn(108    )
+    )
+    expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(1)
 });

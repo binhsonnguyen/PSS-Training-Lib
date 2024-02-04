@@ -61,7 +61,7 @@ export default class Training {
     }
 
     maximumPossibleImprovement(stat: Stat): number {
-        if (this.requiredStatEffect(stat) > this.traingTask.statsEffective.get(stat)) {
+        if (!(this.traingTask.quality.alwaysGainingStat() && this.traingTask.isMainStat(stat)) && this.requiredStatEffect(stat) > this.traingTask.statsEffective.get(stat)) {
             return 0
         } else if (this.traingTask.isMainStat(stat) && this.fatigue100()) {
             return Guaranteed.forQuality(this.traingTask.quality);
@@ -71,7 +71,7 @@ export default class Training {
             const factor = this.statGainFactor(stat);
             const multiplier = this.statGainMultiplier();
             const statGain = this.statGain(stat, factor, multiplier);
-            if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainningStat()) {
+            if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainingStat()) {
                 const guaranted = Guaranteed.forQuality(this.traingTask.quality);
                 if (statGain < guaranted) {
                     return guaranted;
@@ -85,7 +85,7 @@ export default class Training {
     }
 
     minimumPossibleImprovement(stat: Stat): number {
-        if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainningStat()) {
+        if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainingStat()) {
             return Guaranteed.forQuality(this.traingTask.quality)
         } else {
             return 0

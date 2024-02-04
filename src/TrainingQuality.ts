@@ -22,6 +22,6 @@ export default class TrainingQuality {
     }
 
     alwaysGainingStat() {
-        return this == TrainingQuality.HERO || TrainingQuality.SPECIAL || TrainingQuality.LEGENDARY
+        return this == TrainingQuality.HERO || this == TrainingQuality.SPECIAL || this == TrainingQuality.LEGENDARY
     }
 }
