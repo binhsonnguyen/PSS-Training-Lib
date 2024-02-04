@@ -11,8 +11,7 @@
     "prepare": "npm version patch && npm run build",
     "build": "tsc",
     "test": "tsc && jest",
-    "buildprod": "ng build --configuration production",
-    "fbpublish": "firebase deploy"
+    "prod": "npm publish"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
