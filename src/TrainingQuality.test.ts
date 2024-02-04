@@ -8,5 +8,5 @@ test('test training quality has it name', () => {
 });
 test('test training quality could always effectiveness', () => {
     const hero = TrainingQuality.HERO
-    expect(hero.alwaysGainningStat()).toBeTruthy()
+    expect(hero.alwaysGainingStat()).toBeTruthy()
 });
