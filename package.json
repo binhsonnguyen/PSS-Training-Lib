@@ -10,7 +10,8 @@
   "scripts": {
     "prepare": "npm version patch && npm run build",
     "build": "tsc",
-    "test": "tsc && jest"
+    "test": "tsc && jest",
+    "publish": "ng build --configuration production && firebase deploy"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
