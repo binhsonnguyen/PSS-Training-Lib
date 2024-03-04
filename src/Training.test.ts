@@ -112,12 +112,13 @@ test('test sta common', () => {
     expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(0)
 });
 
-test('test sta hero', () => {
+test('test epic cons', () => {
     let training000 = new Training(
         110,
         0,
-        TrainingTask.STA_HERO,
-        new StatsSet().withHp(1).withWpn(108    )
+        TrainingTask.SCI_EPIC,
+        new StatsSet().withAbl(71).withSci(17    )
     )
-    expect(training000.maximumPossibleImprovement(Stat.STA)).toBe(1)
+    expect(training000.maximumPossibleImprovement(Stat.SCI)).toBe(2)
+    expect(training000.maximumPossibleImprovement(Stat.RPR)).toBe(1)
 });
