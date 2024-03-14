@@ -9,7 +9,7 @@ export default class Guaranteed {
         } else if (quality == TrainingQuality.LEGENDARY) {
             return 4;
         } else {
-            return 0
+            return 0;
         }
     }
 }
