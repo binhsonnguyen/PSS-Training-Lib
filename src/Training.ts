@@ -62,26 +62,24 @@ export default class Training {
     }
 
     maximumPossibleImprovement(stat: Stat): number {
-        if (!(this.traingTask.quality.alwaysGainingStat() && this.traingTask.isMainStat(stat)) && this.requiredStatEffect(stat) > this.traingTask.statsEffective.get(stat)) {
-            return 0
-        } else if (this.traingTask.isMainStat(stat) && this.fatigue100()) {
+        if (this.traingTask.isMainStat(stat) && this.fatigue100()) {
             return Guaranteed.forQuality(this.traingTask.quality);
         } else if (this.fatigue1to50() && this.traingTask.trainingEffect(stat) / this.requiredStatEffect(stat) > 1.5) {
-            return this.statGainFactor(stat);
-        } else {
+            return this.roundByStat(this.statGainFactor(stat), stat).toNumber();
+        } else if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainingStat()) {
             const factor = this.statGainFactor(stat);
-            const multiplier = this.statGainMultiplier();
-            const statGain = this.statGain(stat, factor, multiplier);
-            if (this.traingTask.isMainStat(stat) && this.traingTask.quality.alwaysGainingStat()) {
-                const guaranted = Guaranteed.forQuality(this.traingTask.quality);
-                if (statGain < guaranted) {
-                    return guaranted;
-                } else {
-                    return statGain;
-                }
+            const statGain = this.roundByStat(this.fatigueMultiplier().mul(factor), stat).toNumber();
+            const guaranteed = Guaranteed.forQuality(this.traingTask.quality);
+            if (statGain < guaranteed) {
+                return guaranteed;
             } else {
-                return statGain
+                return statGain;
             }
+        } else if (this.traingTask.trainingEffect(stat) >= this.requiredStatEffect(stat)) {
+            const factor = this.statGainFactor(stat);
+            return this.roundByStat(this.fatigueMultiplier().mul(factor), stat).toNumber();
+        } else {
+            return 0;
         }
     }
 
