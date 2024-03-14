@@ -93,23 +93,15 @@ export default class Training {
         }
     }
 
-    private statGain(stat: Stat, factor: number, multiplier: number): number {
-        if (stat == Stat.STA) {
-            return DecimalAdjust.ceil(factor * multiplier, 0);
-        } else {
-            return DecimalAdjust.floor(factor * multiplier, 0);
-        }
-    }
-
-    private statGainMultiplier(): number {
+    private fatigueMultiplier(): Decimal {
         if (this.noFatigue()) {
-            return 1;
+            return new Decimal(1);
         } else if (this.fatigue1to50()) {
-            return 0.5
+            return new Decimal(1).dividedBy(2);
         } else if (this.fatigue51to99()) {
-            return 1 / 3;
+            return new Decimal(1).dividedBy(3);
         } else {
-            return 0
+            return new Decimal(0);
         }
     }
 
