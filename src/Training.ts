@@ -3,6 +3,7 @@ import TrainingTask from "./TrainingTask";
 import Stat from "./Stat";
 import DecimalAdjust from "./DecimalAdjust";
 import Guaranteed from "./Guaranteed";
+import Decimal from 'decimal.js';
 
 export default class Training {
     constructor(totalTrainingPoint: number, fatigue: number, traingTask: TrainingTask, currentTraining: StatsSet,) {
