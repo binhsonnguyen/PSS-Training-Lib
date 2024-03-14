@@ -105,11 +105,19 @@ export default class Training {
         }
     }
 
-    private statGainFactor(stat: Stat): number {
-        const factor1 = this.traingTask.trainingEffect(stat)
-        const factor2 = 1 - this.currentTraining.total() / this.totalTrainingPoint
-        const factor3 = 1 - this.currentTraining.get(stat) / this.totalTrainingPoint
-        return factor1 * factor2 * factor3
+    private statGainFactor(stat: Stat): Decimal {
+        const factor1 = new Decimal(this.traingTask.trainingEffect(stat))
+        const factor2 = new Decimal(1).minus(new Decimal(this.currentTraining.total()).dividedBy(this.totalTrainingPoint));
+        const factor3 = new Decimal(1).minus(new Decimal(this.currentTraining.get(stat)).dividedBy(this.totalTrainingPoint));
+        return new Decimal(factor1).mul(factor2).mul(factor3);
+    }
+
+    private roundByStat(gain: Decimal, stat: Stat) {
+        if (stat == Stat.STA) {
+            return gain.ceil();
+        } else {
+            return gain.floor();
+        }
     }
 
     private noFatigue(): boolean {
