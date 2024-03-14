@@ -6,4 +6,5 @@ test('test Crew Training Task', () => {
     expect(Guaranteed.forQuality(TrainingQuality.HERO)).toBe(1)
     expect(Guaranteed.forQuality(TrainingQuality.SPECIAL)).toBe(2)
     expect(Guaranteed.forQuality(TrainingQuality.LEGENDARY)).toBe(4)
+    expect(Guaranteed.forQuality(TrainingQuality.COMMON)).toBe(0)
 });
