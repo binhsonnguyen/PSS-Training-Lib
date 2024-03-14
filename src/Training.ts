@@ -54,11 +54,11 @@ export default class Training {
     }
 
     requiredStatEffect(stat: Stat): number {
-        let factor1 = 1 - this.currentTraining.total() / this.totalTrainingPoint
-        let factor2 = 1 - this.currentTraining.get(stat) / this.totalTrainingPoint
-        let factor3 = this.statGainMultiplier()
-        let factor = 1 / (factor1 * factor2 * factor3)
-        return DecimalAdjust.floor(factor, -4)
+        let factor1 = new Decimal(1).minus(new Decimal(this.currentTraining.total()).dividedBy(this.totalTrainingPoint));
+        let factor2 = new Decimal(1).minus(new Decimal(this.currentTraining.get(stat)).dividedBy(this.totalTrainingPoint));
+        let factor3 = new Decimal(this.fatigueMultiplier());
+        let factor = new Decimal(1).dividedBy(new Decimal(factor1).mul(factor2).mul(factor3))
+        return DecimalAdjust.floor(factor.toNumber(), -4);
     }
 
     maximumPossibleImprovement(stat: Stat): number {
