@@ -8,7 +8,7 @@ export class HpBreakPoint {
 
     getValue() {
         let additionTp = new Decimal(0)
-        let additionHp: Decimal = new Decimal(0)
+        let additionHp = new Decimal(0)
         let toPassBreakpoint: Decimal = new Decimal(0.5)
         do {
             additionTp = additionTp.plus(1)
