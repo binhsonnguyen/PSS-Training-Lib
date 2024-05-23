@@ -7,4 +7,5 @@ test('test Crew Training Task', () => {
     expect(new HpBreakPoint(10).getValue()).toBe(5)
     expect(new HpBreakPoint(11).getValue()).toBe(5)
     expect(new HpBreakPoint(12).getValue()).toBe(5)
+    expect(new HpBreakPoint(13).getValue()).toBe(4)
 });
