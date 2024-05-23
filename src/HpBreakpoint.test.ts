@@ -4,7 +4,7 @@ import Guaranteed from "./Guaranteed";
 import TrainingQuality from "./TrainingQuality";
 
 test('test Crew Training Task', () => {
-    const base = 10
-    const bpCal = new HpBreakPoint(10)
-    expect(bpCal.getValue()).toBe(5)
+    expect(new HpBreakPoint(10).getValue()).toBe(5)
+    expect(new HpBreakPoint(11).getValue()).toBe(5)
+    expect(new HpBreakPoint(12).getValue()).toBe(5)
 });
