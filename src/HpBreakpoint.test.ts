@@ -22,4 +22,9 @@ test('test continuos hp breakpoint', () => {
     expect(HpBreakPoint.withBase(10).getValue()).toBe(5)
     expect(HpBreakPoint.withBase(10).withAdditionHp(1).getValue()).toBe(5)
     expect(HpBreakPoint.withBase(10).withAdditionHp(2).getValue()).toBe(15)
+
+    expect(HpBreakPoint.withBase(13).withAdditionHp(1).getValue()).toBe(4)
+    expect(HpBreakPoint.withBase(13).withAdditionHp(2).getValue()).toBe(12)
+    expect(HpBreakPoint.withBase(13).withAdditionHp(3).getValue()).toBe(20)
+    expect(HpBreakPoint.withBase(13).withAdditionHp(14).getValue()).toBe(104)
 });
