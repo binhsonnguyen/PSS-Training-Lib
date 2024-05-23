@@ -8,12 +8,14 @@ export class HpBreakPoint {
 
     getValue() {
         let additionTp = new Decimal(0)
-        let additionHp: Decimal
+        let additionHp: Decimal = new Decimal(0)
+        let toPassBreakpoint: Decimal = new Decimal(0.5)
         do {
-            additionTp.plus(1)
-            let multiply = new Decimal(1).plus(additionTp.dividedBy(100))
+            additionTp = additionTp.plus(1)
+            const multiply = additionTp.dividedBy(100)
             additionHp = this._baseHp.mul(multiply)
-        } while (additionHp.toNumber() >= 1)
+        } while (additionHp.lessThan(toPassBreakpoint))
+
         return additionTp.toNumber()
     }
 }
