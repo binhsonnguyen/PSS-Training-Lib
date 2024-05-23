@@ -1,7 +1,7 @@
 import {expect, test} from "@jest/globals";
 import {HpBreakPoint} from "./HpBreakPoint";
 
-test('test Crew Training Task', () => {
+test('test first hp breakpoint', () => {
     expect(new HpBreakPoint(1).getValue()).toBe(50)
     expect(new HpBreakPoint(2).getValue()).toBe(25)
     expect(new HpBreakPoint(3).getValue()).toBe(17)
