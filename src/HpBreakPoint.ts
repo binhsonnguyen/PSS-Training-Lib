@@ -2,8 +2,18 @@ import Decimal from "decimal.js";
 
 export class HpBreakPoint {
     private _baseHp: Decimal
-    constructor(base: number) {
+    private _hpAddition: Decimal
+    private constructor(base: number, hpAddition = 0) {
         this._baseHp = new Decimal(base)
+        this._hpAddition = new Decimal(hpAddition)
+    }
+
+    static base(hp: number) {
+        return new HpBreakPoint(hp)
+    }
+
+    additionHp(hp: number) {
+        return new HpBreakPoint(this._baseHp.toNumber(), hp)
     }
 
     getValue() {
